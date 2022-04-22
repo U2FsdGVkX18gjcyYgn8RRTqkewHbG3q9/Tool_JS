@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>剪切文本</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  </head>
+  <body>
+    <div class="text">这是一段需要复制的文字,他并没有那么长的文本!</div>
+    <button class="btn">点击复制</button>
+    <!-- 执行动作 -->
+    <script type="text/javascript">
+      document.querySelector('.btn').onclick = function () {
+        const text = document.querySelector('.text').innerHTML;
+        copyText(text);
+      }
+    </script>
+    <!-- 引入外界js内容 -->
+    <script src="./CopyText.js"></script>
+  </body>
+</html>
