@@ -5,9 +5,12 @@
  */
 function copyText (text) {
  if (navigator.clipboard) {
-    // 直接使用现代浏览器的剪切板api，IE禁用
+
+    // 直接使用现代浏览器的剪切板api，IE无此API
     navigator.clipboard.writeText(text)
+    
  } else {
+
     // 先创建输入文本框
     const textarea = document.createElement('textarea')
     document.body.appendChild(textarea)
@@ -26,5 +29,6 @@ function copyText (text) {
 
     // 移除文本框
     document.body.removeChild(textarea)
+
  }
 }
